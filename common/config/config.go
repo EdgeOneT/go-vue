@@ -26,7 +26,7 @@ type server struct {
 type db struct {
 	Dialects string `yaml:"dialects"`
 	Host     string `yaml:"host"`
-	Port     string `yaml:"port"`
+	Port     int    `yaml:"port"`
 	Db       string `yaml:"db"`
 	Username string `yaml:"username"`
 	Password string `yaml:"password"`
@@ -43,8 +43,8 @@ type redis struct {
 
 // imageSettings图片上传配置
 type imageSettings struct {
-	UploadDir string `yaml:"uploadDir"`
-	ImageHost string `yaml:"imageHost"`
+	UploadDir string `yaml:"uploadDir"` // 文件上传目录（本地服务器）
+	ImageHost string `yaml:"imageHost"` // 外部访问图片地址
 }
 
 type log struct {
