@@ -6,6 +6,7 @@ import (
 	"context"
 	"github.com/gin-gonic/gin"
 	"go-vue/common/config"
+	_ "go-vue/docs"
 	"go-vue/pkg/db"
 	"go-vue/pkg/log"
 	"go-vue/pkg/redis"
@@ -16,6 +17,12 @@ import (
 	"time"
 )
 
+// @title 通用后台管理系统
+// @version 1.0
+// @description 后台管理系统API接口文档
+// @securityDefinitions.apikey ApiKeyAuth
+// @in header
+// @name Authorization
 func main() {
 	// 加载日志log
 	log := log.Log()
